@@ -24,6 +24,7 @@ class ToDoListTableViewController: SwipeTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = selectedCategory?.name
       
     }
     

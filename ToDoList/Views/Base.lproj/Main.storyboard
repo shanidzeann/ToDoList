@@ -40,7 +40,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Items" id="SjJ-x7-ZX3">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SFo-RZ-rY8">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="TvJ-vm-LgL" id="LH5-bT-nAb"/>
                             </connections>
@@ -59,15 +59,19 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CaV-q0-fnU" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vr3-9j-dmJ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vr3-9j-dmJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" systemColor="systemBlueColor"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zfd-aA-bpU">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="uw5-pU-3jn" kind="relationship" relationship="rootViewController" id="0g8-kw-VbO"/>
                     </connections>
@@ -99,9 +103,9 @@
                             <outlet property="delegate" destination="uw5-pU-3jn" id="uLD-Dx-vzI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ToDoList" id="lRi-h0-VJO">
+                    <navigationItem key="navigationItem" title="ToDoList" largeTitleDisplayMode="always" id="lRi-h0-VJO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EZH-BH-9AO">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="uw5-pU-3jn" id="jTE-fN-FVe"/>
                             </connections>
