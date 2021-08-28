@@ -17,6 +17,7 @@
 		892FC5F226D50A1C008F0C34 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FC5F126D50A1C008F0C34 /* Category.swift */; };
 		892FC5F426D50A56008F0C34 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FC5F326D50A56008F0C34 /* Item.swift */; };
 		8996053826CF8837007203EF /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996053726CF8837007203EF /* CategoryTableViewController.swift */; };
+		89CA1E5B26D7CCB100406308 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CA1E5A26D7CCB100406308 /* SwipeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		892FC5F126D50A1C008F0C34 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		892FC5F326D50A56008F0C34 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8996053726CF8837007203EF /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		89CA1E5A26D7CCB100406308 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		9097F160B3B0C4AA0D8E42F3 /* Pods-ToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.debug.xcconfig"; path = "Target Support Files/Pods-ToDoList/Pods-ToDoList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				8996053726CF8837007203EF /* CategoryTableViewController.swift */,
+				89CA1E5A26D7CCB100406308 /* SwipeTableViewController.swift */,
 				891FE68526C836A10012DC0A /* ToDoListTableViewController.swift */,
 			);
 			path = Controllers;
@@ -249,6 +252,7 @@
 				891FE68626C836A10012DC0A /* ToDoListTableViewController.swift in Sources */,
 				8996053826CF8837007203EF /* CategoryTableViewController.swift in Sources */,
 				891FE68226C836A10012DC0A /* AppDelegate.swift in Sources */,
+				89CA1E5B26D7CCB100406308 /* SwipeTableViewController.swift in Sources */,
 				892FC5F426D50A56008F0C34 /* Item.swift in Sources */,
 				891FE68426C836A10012DC0A /* SceneDelegate.swift in Sources */,
 				892FC5F226D50A1C008F0C34 /* Category.swift in Sources */,
