@@ -14,7 +14,6 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         super.viewDidLoad()
 
         tableView.rowHeight = 80.0
-        
     }
     
     // MARK: - Table view data source
@@ -32,13 +31,8 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         guard orientation == .right else { return nil }
 
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-            // handle action by updating model with deletion
-            
-            
             self.updateModel(at: indexPath)
         }
-
-        // customize the action appearance
         deleteAction.image = UIImage(named: "delete-icon")
 
         return [deleteAction]
@@ -51,7 +45,6 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     }
     
     func updateModel(at indexPath: IndexPath) {
-        
     }
 
  

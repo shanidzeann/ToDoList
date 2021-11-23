@@ -10,7 +10,6 @@ import RealmSwift
 
 class ToDoListTableViewController: SwipeTableViewController {
     
-    
     var toDoItems: Results<Item>?
     let realm = try! Realm()
     
@@ -23,9 +22,7 @@ class ToDoListTableViewController: SwipeTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = selectedCategory?.name
-      
     }
     
 
@@ -40,20 +37,14 @@ class ToDoListTableViewController: SwipeTableViewController {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
 
         if let item = toDoItems?[indexPath.row] {
-        
             cell.textLabel?.text = item.title
-        
             cell.accessoryType = item.done ? .checkmark : .none
-            
         } else {
             cell.textLabel?.text = "No items added"
         }
-        
-
         return cell
     }
 
-   
     
     // MARK: - TableView Delegate Methods
     
@@ -71,7 +62,6 @@ class ToDoListTableViewController: SwipeTableViewController {
         }
         
         tableView.reloadData()
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -79,18 +69,13 @@ class ToDoListTableViewController: SwipeTableViewController {
     // MARK: - Add New Items
     
     
-    
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
-        
         let alert = UIAlertController(title: "Add new item", message: "", preferredStyle: .alert)
-        
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
-            
-
+        
             if let currentCategory = self.selectedCategory {
-                
                 do {
                     try self.realm.write({
                         let newItem = Item()
@@ -101,33 +86,22 @@ class ToDoListTableViewController: SwipeTableViewController {
                 } catch {
                     print("Error saving new item \(error)")
                 }
-                
             }
-            
             self.tableView.reloadData()
-            
         }
-        
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Type new item"
             textField = alertTextField
         }
         
         alert.addAction(action)
-        
         present(alert, animated: true, completion: nil)
-        
-        
     }
     
     // MARK: - Model Manipulation Methods
     
-
-    
     func loadItems() {
-
         toDoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
-
         tableView.reloadData()
     }
     
@@ -154,13 +128,8 @@ class ToDoListTableViewController: SwipeTableViewController {
 extension ToDoListTableViewController : UISearchBarDelegate {
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-
-//        toDoItems = toDoItems?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "title", ascending: true)
-        
         toDoItems = toDoItems?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "dateCreated", ascending: true)
-        
         tableView.reloadData()
-
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -173,7 +142,6 @@ extension ToDoListTableViewController : UISearchBarDelegate {
 
         }
     }
-
 }
 
 
